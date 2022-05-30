@@ -84,7 +84,8 @@ def vrpPlot(root,Route_list,tip,canvas):
     Plot.VrpPlot(Root,Route_list,canvas)
     tip.set('Plotted')
 
-
+def ExitSystem(root):
+    root.destroy()
 
 def layout(root):
     fpath = StringVar()
@@ -95,6 +96,7 @@ def layout(root):
     tip = StringVar()
 
     Label(root, text = 'Path Planning Problem Simulator',font='SimHei 20 bold').place(x=220,y=10)
+    Button(root,text='Exit',command= lambda: ExitSystem(root)).place(x=930,y=10)
 
     #坐标系画布
     GraphFrame = Frame(root,relief=GROOVE,borderwidth=2)#脊状边缘的
